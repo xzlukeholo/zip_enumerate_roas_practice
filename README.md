@@ -59,3 +59,12 @@ The script analyzes the following mock dataset for 5 electronics products:
 效能優化 (Performance)：目前版本使用雙迴圈分別處理明細與分析，下一版預計將迴圈合併為單次遍歷，降低時間複雜度。
 
 結構重構 (Refactoring)：優化最高營收商品的追蹤邏輯，直接儲存商品字串，減少索引轉換的潛在錯誤。
+
+
+2026/5/25優化與新增:
+
+新增「值得加碼廣告」判斷
+使用 None 初始化最高營收商品，讓邏輯更嚴謹
+使用 list 收集符合條件的商品
+使用 ", ".join() 輸出多個商品名稱
+把重複 print() 簡化成先判斷 performance 再統一輸出
